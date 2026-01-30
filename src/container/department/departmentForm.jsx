@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import ZTextField from "../../component/ZTextField/ztextfield";
 import ZDropdown from "../../component/ZDropdown/zdropdown";
-import ZCheckbox from "../../component/ZCheckbox/zcheckbox";
+import ZCheckbox from "../../component/ZCheckBox/ZCheckBox";
 import ZButton from "../../component/ZButton/zbutton";
 import { Labels } from "../../utils/constants/labels";
 import { PostApi, GetApi } from "../../utils/api/networking";

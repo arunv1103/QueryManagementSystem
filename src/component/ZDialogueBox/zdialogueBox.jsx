@@ -22,7 +22,7 @@ import ZButton from "../ZButton/zbutton";
 import ZTypography from "../ZTypography/ztypography";
 import ZTextField from "../ZTextField/ztextfield";
 import ZDropdown from "../ZDropdown/zdropdown";
-import ZCheckBox from "../ZCheckbox/zcheckbox";
+import ZCheckBox from "../ZCheckBox/ZCheckBox";
 import { CommonColors } from "../../utils/constants/colors";
 
 export default function ZDialogueBox({

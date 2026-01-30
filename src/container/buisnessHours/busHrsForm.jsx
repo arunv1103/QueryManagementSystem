@@ -5,7 +5,7 @@ import { Labels } from '../../utils/constants/labels';
 import BusHrsFields from './busHrsFields';
 import ZTextField from '../../component/ZTextField/ztextfield';
 import ZDropdown from '../../component/ZDropdown/zdropdown';
-import ZCheckBox from '../../component/ZCheckbox/zcheckbox';
+import ZCheckBox from '../../component/ZCheckBox/ZCheckBox';
 import ZCard from '../../component/ZCard/zcard';
 import { ApiUrl, UsersForm_Api } from '../../utils/api/apiUrl';
 import { GetApi, PostApi } from '../../utils/api/networking';

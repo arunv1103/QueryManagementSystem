@@ -22,7 +22,7 @@ import {
 import ZCard from "../../component/ZCard/zcard";
 import ZTextField from "../../component/ZTextField/ztextfield";
 import ZDropdown from "../../component/ZDropdown/zdropdown";
-import ZCheckBox from "../../component/ZCheckbox/zcheckbox";
+import ZCheckBox from "../../component/ZCheckBox/ZCheckBox";
 import ZButton from "../../component/ZButton/zbutton";
 import ZTypography from "../../component/ZTypography/ztypography";
 import { decryptPassword, encryptPassword } from "../../utils/encryption/cryptoUtil";

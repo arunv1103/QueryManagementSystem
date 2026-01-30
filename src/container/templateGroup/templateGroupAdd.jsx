@@ -5,7 +5,7 @@ import ZCard from '../../component/ZCard/zcard';
 import ZTextField from '../../component/ZTextField/ztextfield';
 import { Labels } from '../../utils/constants/labels';
 import { allowOnlyAlphabets, isSuccess } from '../../utils/commonFunction/common';
-import ZCheckBox from '../../component/ZCheckbox/zcheckbox';
+import ZCheckBox from '../../component/ZCheckBox/ZCheckBox';
 import { labelRoutes } from '../../navigations/labelRoutes';
 import ZTextEditor from './zTextEditor';
 import ZButton from '../../component/ZButton/zbutton';

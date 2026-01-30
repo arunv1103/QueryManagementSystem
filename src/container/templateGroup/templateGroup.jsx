@@ -8,7 +8,7 @@ import ZPopoverDialog from '../../component/ZDialogueBox/zdialog';
 import { Button, IconButton, THEME_ID, Tooltip } from '@mui/material';
 import ZButton from '../../component/ZButton/zbutton';
 import ZTextField from '../../component/ZTextField/ztextfield';
-import ZCheckBox from '../../component/ZCheckbox/zcheckbox';
+import ZCheckBox from '../../component/ZCheckBox/ZCheckBox';
 import { TemplateGroup_Api, UsersForm_Api } from '../../utils/api/apiUrl';
 import { GetApi, PostApi } from '../../utils/api/networking';
 import ZDropdown from '../../component/ZDropdown/zdropdown';

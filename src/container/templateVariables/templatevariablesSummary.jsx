@@ -13,7 +13,7 @@ import { TemplateVar_Api, Master_Api} from "../../utils/api/apiUrl";
 import { AppNavigation } from "../../navigations/appNavigation";
 import ZTextField from "../../component/ZTextField/ztextfield";
 import ZButton from "../../component/ZButton/zbutton";
-import ZCheckbox from "../component/ZCheckBox/zcheckbox";
+import  ZCheckbox  from "../../component/ZCheckBox/ZCheckBox";
 import { CommonColors } from "../../utils/constants/colors";
 import { allowAlphaSpace, isNotEmpty } from "../../utils/commonFunction/common";
 import ZDropdown from "../../component/ZDropdown/zdropdown";

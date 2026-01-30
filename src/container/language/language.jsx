@@ -13,7 +13,7 @@ import ZButton from "../../component/ZButton/zbutton";
 import ZTypography from "../../component/ZTypography/ztypography";
 import { CommonColors } from "../../utils/constants/colors";
 import ZTextField from "../../component/ZTextField/ztextfield";
-import ZCheckbox from "../../component/ZCheckbox/zcheckbox";
+import ZCheckbox from "../../component/ZCheckBox/ZCheckBox";
 import ZToasterMsg from "../../component/ZToasterMessage/ztoasterMessage";
 import ZDialogueBox from "../../component/ZDialogueBox/zdialogueBox";
 import { PostApi } from "../../utils/api/networking";
