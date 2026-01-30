@@ -1,0 +1,11 @@
+.ticket-reply-back-icon {
+  font-size: 24px;   /* adjust size */
+  color: #333;       /* default color */
+  cursor: pointer;
+  transition: all 0.3s ease;  /* smooth animation */
+}
+
+.ticket-reply-back-icon:hover {
+  color: #80D8FF;      /* change color on hover */
+  transform: scale(1.2); /* slightly enlarge */
+}

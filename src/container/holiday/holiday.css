@@ -1,0 +1,147 @@
+/* Holiday List Header */
+.holiday-list-header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  font-size:16px;
+}
+
+.header-left-container {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  margin-top:10px;
+}
+.header-right-container{
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  margin-top:10px;
+  margin-bottom:12px;
+}
+
+/* Holiday List Cell */
+.holiday-list-cell {
+  display: flex;
+  align-items: center;
+}
+
+.holiday-list-cell:hover .edit-icon {
+  visibility: visible;
+}
+
+.active-holiday-list {
+  color: #1976d2;
+  text-decoration: underline;
+  cursor: pointer;
+  pointer-events: auto;
+}
+
+.inactive-holiday-list {
+  color: #888;
+  text-decoration: none;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+.edit-icon {
+  visibility: hidden;
+}
+
+/* Messages */
+.no-data-message,
+.no-holidays-message,
+.select-holiday-message {
+  text-align: center;
+  color: #888;
+  font-size:12px;
+  margin-top:10px;
+  padding-top: 50px;
+}
+/* 
+.select-holiday-message {
+  
+} */
+
+.add-holiday-link {
+  color: #0077cc;
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+/* Holiday Name Dialog */
+.holiday-name-dialog-content {
+  margin-top: 8px;
+}
+
+.date-range-container {
+  margin-top: 16px;
+  display: flex;
+  align-items: center;
+}
+
+.change-dates-button {
+  margin-right: 16px;
+}
+
+.selected-dates {
+  color: #888;
+  margin-left:5px; 
+  font-size:12px; 
+}
+.datepicker{
+  margin-top:10px;
+  width:120px;
+}
+/* Holiday List Dialog */
+.holiday-list-dialog-content {
+  margin-top: 8px;
+}
+
+/* Date Range Picker Styles */
+.date-range-picker-container {
+  padding: 16px;
+}
+
+.calendar-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 4px;
+}
+
+.date-range-picker-container .p-2 {
+  padding: 8px;
+  text-align: center;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.date-range-picker-container .bg-blue-500 {
+  background-color: #3f51b5;
+  color: white;
+}
+
+.date-range-picker-container .bg-blue-100 {
+  background-color: #e3f2fd;
+  color: #1976d2;
+}
+
+.date-range-picker-container .hover\:bg-gray-100:hover {
+  background-color: #f5f5f5;
+}
+
+.date-range-picker-container .border-blue-300 {
+  border: 1px solid #64b5f6;
+}
+
+.date-range-picker-container .font-semibold {
+  font-weight: 600;
+}
+
+.change-dates-link {
+  color: #64b5f6; /* or your primary link color */
+  cursor: pointer;
+  text-decoration: underline;
+  margin-left: 4px;
+  font-size:12px;
+}

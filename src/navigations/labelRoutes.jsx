@@ -1,0 +1,26 @@
+export const labelRoutes = {
+  home: "/",
+  userDashboard:"/userDasboard",
+  ticketForm: "/ticketForm",
+  userSummary: "/userSummary",
+  userForm: "/userForm",
+  organization: "/organisation",
+  organizationSummary: "/organisationSummary",
+  departmentSummary: "/departmentSummary",
+  department: "/department",
+  serviceQueue: "/serviceQueue",
+  holiday: "/holiday",
+  busHrsForm: "/businessHours/Form",
+  busHrsSummary: "/businessHours/Summary",
+  busHrsBox: "/buisnessHours/selection",
+  assignMethod: "/assignMethod/summary",
+  templateGroup: "/templateGroup",
+  templateGroupAdd: "/templateGroup/add",
+  language: "/language",
+  templateVariablesSummary: "/templateVariableSummary",
+  ticketDashboard: "/ticketDashboard",
+  ticketView:"/userDashboard/ticketView",
+  ticketReply: "/userDashboard/ticketView/reply",
+  PageNotFound:"*"
+
+};

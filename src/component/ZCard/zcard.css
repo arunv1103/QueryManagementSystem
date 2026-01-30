@@ -1,0 +1,68 @@
+.zcard-container {
+  background-color: white;
+  box-shadow: 1px 2px 2px 1px rgba(0, 0, 0, 0.1);
+  border-radius: 1rem;
+  width: 100%;
+  padding: 15px;
+  box-sizing: border-box;
+  max-height: 100%;
+  overflow: hidden;
+}
+/* Header */
+.zcard-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-right: 13px;
+  margin-left: -26px;
+}
+/* Title */
+.zcard-title {
+  flex-grow: 1;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #2d3748;
+  margin: 0;
+  text-align: left; 
+}
+/* Header right side */
+.zcard-side {
+  width: 48px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+/* Back button */
+.zcard-back-button-wrapper {
+  width: 48px;
+}
+
+.zcard-back-button {
+  padding: 8px;
+}
+/* Content styling */
+.zcard-content {
+  color: #4a5568;
+  width: 100%;
+  overflow: hidden; /* ✅ Prevent scroll inside content too */
+}
+/* 🔽 Responsive adjustments */
+@media (max-width: 768px) {
+  .zcard-container {
+    padding: 12px;
+  }
+  .zcard-title {
+    font-size: 1.25rem;
+  }
+  .zcard-side {
+    width: 40px;
+  }
+}
+@media (max-width: 480px) {
+  .zcard-title {
+    font-size: 1.1rem;
+  }
+  .zcard-side {
+    width: 36px;
+  }
+}

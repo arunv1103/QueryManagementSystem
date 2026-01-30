@@ -1,0 +1,2 @@
+root: C:\Users\Thinussleen\Documents\Saskia\Qms\nvm
+path: C:\Program Files\nodejs

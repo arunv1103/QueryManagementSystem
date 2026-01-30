@@ -1,0 +1,450 @@
+
+
+
+
+/* Professional Business Hours Component */
+:root {
+    --bh-row-height: 23px;
+}
+
+.bh-box-wrapper {
+    max-width: 90%;
+    margin: 0 auto;
+    overflow-x: hidden;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    background-color: #fafafa;
+}
+
+.bh-grid {
+    display: flex;
+    border: 1px solid #d1d5db;
+    border-radius: 4px;
+    overflow: hidden;
+    background: #ffffff;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+.bh-time-column {
+    flex: 0 0 65px;
+    background-color: #f8fafc;
+    border-right: 1px solid #d1d5db;
+}
+
+.bh-time-cell {
+    height: var(--bh-row-height);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 10px;
+    font-weight: 500;
+    color: #4b5563;
+    border-bottom: 1px solid #e5e7eb;
+    box-sizing: border-box;
+}
+
+.bh-time-cell:last-child {
+    border-bottom: none;
+}
+
+.bh-day-column {
+    position: relative;
+    flex: 1;
+    border-right: 1px solid #e5e7eb;
+    min-width: 100px;
+}
+
+.bh-day-column:last-child {
+    border-right: none;
+}
+
+.bh-day-header {
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+    font-size: 12px;
+    background-color: #f1f5f9;
+    border-bottom: 1px solid #d1d5db;
+    color: #1f2937;
+    text-transform: capitalize;
+    box-sizing: border-box;
+    padding: 2px;
+}
+
+.bh-day-header.empty {
+    background: transparent;
+    border: none;
+}
+
+.bh-cell {
+    height: var(--bh-row-height);
+    border-bottom: 1px solid #f3f4f6;
+    cursor: pointer;
+    transition: background-color 0.15s ease;
+    position: relative;
+    box-sizing: border-box;
+}
+.bus-hrs-link {
+  font-size: 0.775rem;
+  font-weight: 500;
+  color: #23A9F2;
+  text-decoration: underline;
+  cursor: pointer;
+  text-align: center;
+  margin-top: 50px;
+  margin-bottom: 30px;
+}
+.hours-error {
+  font-size: 0.72rem;      
+  color: #d32f2f;          
+  font-weight: 450; 
+  text-align: center;       
+  display: block;         
+  margin-top: -25px;         
+}
+.bh-cell:last-child {
+    border-bottom: none;
+}
+
+.bh-cell:hover {
+    background-color:  rgba(169, 201, 169, 1);
+}
+
+.bh-cell.active {
+    background-color: rgb(54, 167, 54)  ;
+}
+
+.bh-cell.active:hover {
+    background-color:  #f0f9ff;
+}
+
+.bh-block-label {
+    position: absolute;
+    left: 2px;
+    right: 2px;
+    background-color: rgb(47, 151, 47);
+    color: white;
+    font-size: 10px;
+    font-weight: 500;
+    text-align: center;
+    /* border-radius: 2px; */
+    z-index: 10;
+    /* pointer-events: none; */
+    /* box-sizing: border-box; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* Fix for proper positioning - add top offset for header */
+    top: 32px;
+}
+
+.bh-buttons {
+    margin-top: 16px;
+    display: flex;
+    justify-content: flex-end;
+    gap: 8px;
+}
+
+.cancel-btn,
+.submit-btn {
+    padding: 8px 16px;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: 500;
+    font-size: 13px;
+    transition: all 0.15s ease;
+    min-width: 80px;
+}
+
+.submit-btn {
+    background-color: #2563eb;
+    color: white;
+    border-color: #2563eb;
+}
+
+.submit-btn:hover {
+    background-color: #1d4ed8;
+    border-color: #1d4ed8;
+}
+
+.submit-btn:focus {
+    outline: 2px solid #93c5fd;
+    outline-offset: 2px;
+}
+
+.cancel-btn {
+    background-color: #ffffff;
+    color: #374151;
+    border-color: #d1d5db;
+}
+
+.cancel-btn:hover {
+    background-color: #f9fafb;
+    border-color: #9ca3af;
+}
+
+.cancel-btn:focus {
+    outline: 2px solid #d1d5db;
+    outline-offset: 2px;
+}
+
+
+/* Container for 7-day grid */
+
+.seven-row-container {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr); /* Always 7 in one row */
+  gap: 14px;
+  padding: 16px 0px 16px 0px;
+  font-family: 'Poppins', sans-serif;
+ 
+}
+
+/* Individual day box */
+.seven-box {
+  background-color: #d1d5db;
+  border-radius: 12px;
+  padding: 16px;
+  text-align: center;
+  flex-wrap: nowrap; 
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  transition: box-shadow 0.3s ease;
+  min-width: 120px; /* Ensures visibility if container overflows */
+}
+
+.seven-box:hover {
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
+}
+
+/* Day name */
+.seven-box h3 {
+  font-size: 1rem;
+  font-weight: 700;
+  color:#4B5563;
+  margin: 0 0 8px;
+  
+}
+
+/* Time range */
+.seven-box p {
+  font-size: 0.7rem;
+  font-weight: 300;
+  color: #4B5563;
+  margin: 0;
+}
+.seven-row-container-wrapper {
+  overflow-x: hidden;
+  
+}
+
+/* Responsive Design */
+@media screen and (max-width: 1024px) {
+    .bh-box-wrapper {
+        padding: 20px;
+    }
+
+    .seven-row-container {
+        grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+        gap: 14px;
+        padding: 16px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    :root {
+        --bh-row-height: 26px;
+    }
+
+    .bh-box-wrapper {
+        padding: 12px;
+    }
+
+    .bh-grid {
+        overflow-x: auto;
+        min-width: 500px;
+    }
+
+    .bh-time-column {
+        flex: 0 0 55px;
+    }
+
+    .bh-time-cell {
+        font-size: 9px;
+    }
+
+    .bh-day-header {
+        font-size: 11px;
+        height: 28px;
+        padding: 0 4px;
+    }
+
+    .bh-block-label {
+        font-size: 8px;
+        top: 28px;
+    }
+
+    .bh-buttons {
+        justify-content: stretch;
+        flex-direction: column;
+        gap: 6px;
+        margin-top: 12px;
+    }
+
+    .cancel-btn,
+    .submit-btn {
+        width: 100%;
+        min-width: auto;
+        padding: 6px 12px;
+    }
+
+    .seven-row-container {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
+        padding: 12px;
+    }
+
+    .seven-box {
+        padding: 12px 8px;
+    }
+
+    .seven-box h3 {
+        font-size: 14px;
+    }
+
+    .seven-box p {
+        font-size: 13px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    :root {
+        --bh-row-height: 24px;
+    }
+
+    .bh-box-wrapper {
+        padding: 8px;
+    }
+
+    .bh-grid {
+        min-width: 400px;
+    }
+
+    .bh-time-column {
+        flex: 0 0 45px;
+    }
+
+    .bh-time-cell {
+        font-size: 8px;
+    }
+
+    .bh-day-header {
+        font-size: 10px;
+        height: 24px;
+    }
+
+    .bh-block-label {
+        top: 24px;
+        font-size: 7px;
+    }
+
+    .seven-row-container {
+        grid-template-columns: 1fr;
+        gap: 8px;
+        padding: 8px;
+    }
+
+    .seven-box {
+        padding: 10px 6px;
+    }
+
+    .seven-box h3 {
+        font-size: 12px;
+        margin-bottom: 4px;
+    }
+
+    .seven-box p {
+        font-size: 11px;
+    }
+}
+
+/* Loading States */
+.bh-grid.loading {
+    opacity: 0.6;
+    pointer-events: none;
+}
+
+.seven-box.loading {
+    opacity: 0.6;
+    pointer-events: none;
+}
+
+/* Focus States for Accessibility */
+.bh-cell:focus {
+    outline: 2px solid #2563eb;
+    outline-offset: -2px;
+}
+
+/* Disabled States */
+.bh-cell.disabled {
+    background-color: #f3f4f6;
+    cursor: not-allowed;
+    opacity: 0.5;
+}
+
+.bh-cell.disabled:hover {
+    background-color: #f3f4f6;
+}
+
+.submit-btn:disabled,
+.cancel-btn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+    pointer-events: none;
+}
+
+/* Print Styles */
+@media print {
+    .bh-box-wrapper {
+        background-color: transparent;
+        padding: 0;
+    }
+
+    .bh-grid {
+        box-shadow: none;
+        border: 2px solid #000;
+    }
+
+    .bh-buttons {
+        display: none;
+    }
+
+    .seven-box {
+        box-shadow: none;
+        border: 1px solid #000;
+    }
+}
+
+/* High Contrast Mode */
+@media (prefers-contrast: high) {
+    .bh-grid {
+        border-width: 2px;
+        border-color: #000;
+    }
+
+    .bh-cell.active {
+        background-color: #000;
+        color: #fff;
+    }
+
+    .bh-block-label {
+        background-color: #000;
+        border: 1px solid #fff;
+    }
+
+    .seven-box {
+        border-width: 2px;
+        border-color: #000;
+    }
+}

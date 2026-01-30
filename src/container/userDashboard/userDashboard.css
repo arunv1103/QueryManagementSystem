@@ -1,0 +1,114 @@
+.dashboard-wrapper {
+  padding: 0px 20px 20px 20px;
+  background-color: #ffffffff;
+  /* height: 100vh; */
+}
+.flex-between {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* .status-chip{
+        display: 'inline-flex';
+        alignItems: 'center';
+        padding: '4px 8px';
+        backgroundColor: '#e0f2fe';
+        color: '#0369a1';
+        borderRadius: '16px';
+        fontSize: '0.75rem';
+        fontWeight: '500';
+        lineHeight: 1;
+} */
+.dashboard-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  padding: 10px 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+.barchart-heading{
+  margin-bottom: 80px;
+}
+.dashboard-sections {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 9px;
+}
+/* .dashboard-card {
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  padding: 20px;
+  height: 90%;
+} */
+.bar-chart {
+  display: flex;
+  justify-content: center; 
+  align-items: center;   
+  height: 100%;            
+  padding: 10px; 
+  margin-top:60px;          
+}
+.donut-chart {
+ min-height: 250px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.explore-images {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 50px;
+  margin-top: 70px;
+  box-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+}
+.explore-images img {
+  width: 50px;
+  height: 50px;
+  object-fit: contain;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+.explore-images img:hover {
+  transform: scale(1.1);
+}
+.no-data-message {
+  text-align: center;
+  color: #888;
+  font-size: 14px;
+  margin-top: 50px;
+}
+.date-range {
+  font-size: 14px;
+  color: #666;
+}
+.raise-query-text {
+  color: #36A2EB;
+  cursor: pointer;
+  margin: 20px;
+  text-decoration: underline;   
+}
+.note-dialog-title {
+  margin: 10px;
+}
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.chart-container-bar {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  margin-top: 80px;
+}
+@media (max-width: 768px) {
+  .dashboard-sections {
+    grid-template-columns: 1fr;
+  }
+}
