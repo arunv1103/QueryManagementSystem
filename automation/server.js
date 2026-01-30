@@ -7,9 +7,9 @@ const app = express();
 app.use(cors());
 app.use(bodyParser.json());
 
-const openai = new OpenAI({
-  apiKey: "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", 
-});
+// const openai = new OpenAI({
+//   apiKey: "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", 
+// });
 
 app.post("/chat", async (req, res) => {
   try {
